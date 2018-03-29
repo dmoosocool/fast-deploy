@@ -1,0 +1,19 @@
+{
+  "test": {
+    "host": "192.168.0.110",
+    "prot": "22",
+    "username": "root",
+    "password": "root",
+    "localpath": "./uploads",
+    "serverpath": "/usr/local/wwwroot"
+  },
+
+  "prod": {
+    "host": "119.28.32.43",
+    "prot": "22",
+    "username": "root",
+    "password": "root",
+    "localpath": "./uploads",
+    "serverpath": "/usr/local/wwwroot"
+  }
+}
