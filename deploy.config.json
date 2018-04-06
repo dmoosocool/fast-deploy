@@ -1,7 +1,7 @@
 {
   "test": {
     "host": "192.168.0.110",
-    "prot": "22",
+    "port": "22",
     "username": "root",
     "password": "root",
     "localpath": "./uploads",
@@ -10,7 +10,7 @@
 
   "prod": {
     "host": "119.28.32.43",
-    "prot": "22",
+    "port": "22",
     "username": "root",
     "password": "root",
     "localpath": "./uploads",
