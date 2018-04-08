@@ -17,7 +17,7 @@
 
 ### 创建配置文件
 在项目根目录中创建 deploy.config.json。
-```json
+```javascript
 {
   // 环境. 默认"test环境"
   "test": {
