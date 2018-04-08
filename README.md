@@ -1,4 +1,4 @@
-# vue-deploy
+# fast-deploy
 将目录快速压缩, 发布到服务器上, 执行远端服务器脚本.
 
 ## Task List
