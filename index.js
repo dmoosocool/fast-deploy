@@ -4,10 +4,13 @@ const path = require('path');
 const chalk = require('chalk');
 const emoji = require('node-emoji');
 
-const archiverZip = require('./archiverZip');
-const getConfigByCli = require('./getConfigByCli');
-const getConfigByFile = require('./getConfigByFile');
-const upload = require('./upload');
+// 加载工具.
+const archiverZip = require('./lib/archiverZip');
+const getConfigByCli = require('./lib/getConfigByCli');
+const getConfigByFile = require('./lib/getConfigByFile');
+const upload = require('./lib/upload');
+const runshell = require('./lib/runshell');
+
 // program
 //   .version('1.0.0')
 //   .parse(process.argv);
@@ -34,15 +37,17 @@ async function main() {
     // 获取真实上传的zip路径.
     realUploadPath = path.join(process.cwd(), 'deployed', filename);
     // 开始执行上传动作.
-    return await upload(config.host, config.port, config.username, config.password, realUploadPath, config.serverpath);
+    let uploadStatus = await upload(config.host, config.port, config.username, config.password, realUploadPath, config.serverpath);
 
-  }
-}
+    if(uploadStatus){
+      console.log('上传成功.');
+    }
 
-(async function() {
-  let uploadStatus = await main();
-  if(uploadStatus){
-    console.log('上传成功.');
-    process.exit();
+    let shell = config.shell.replace(/{upload_zip_name}/, filename);
+    console.log(shell);
+    // 开始执行shell命令.
+    await runshell(config.host, config.port, config.username, config.password, shell);
   }
-})();
+};
+
+main();
