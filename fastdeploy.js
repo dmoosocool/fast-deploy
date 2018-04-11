@@ -14,8 +14,6 @@ const upload = require('./lib/upload');
 const runshell = require('./lib/runshell');
 
 program
-  .command('fastdeploy')
-
   .version('1.0.0')
   .option('-F, --file [file]', 'get config by file.')
   .option('-T, --type [type]', 'get config by file and set category type.')
@@ -98,7 +96,6 @@ ${chalk.hex('#deaded').bold("错误: 没有找到'" + chalk.red.bold(realLocalpa
     config = await getConfigByCli();
   }
 
-  console.log(config);
   // 执行.
   main(config);
 })();

@@ -5,15 +5,16 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch via NPM",
+      "name": "debug npm",
       "type": "node",
       "request": "launch",
+      // "console": "externalTerminal",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "npm",
       "runtimeArgs": [
           "run-script", "debug"
       ],
       "port": 9229
-  }
+    }
   ]
 }
