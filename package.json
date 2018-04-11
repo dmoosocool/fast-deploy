@@ -4,7 +4,9 @@
   "description": "fast deploy for vue.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./lib fastdeploy.js",
+    "test": "npm run lint",
+    "debug": "node --nolazy --inspect-brk=9229 fastdeploy.js --file"
   },
   "bin": {
     "fastdeploy": "fastdeploy.js"
@@ -34,5 +36,10 @@
     "ora": "^2.0.0",
     "scp2": "^0.5.0",
     "ssh2": "^0.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-nodejs": "^2.0.0",
+    "eslint-plugin-import": "^2.10.0"
   }
 }
