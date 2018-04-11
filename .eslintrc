@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "nodejs"
+  ],
+
+  "rules": {
+    "brace-style": [2, "stroustrup", {"allowSingleLine": true}]
+  }
+}
