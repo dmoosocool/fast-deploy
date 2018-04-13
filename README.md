@@ -12,11 +12,23 @@
 - [x] 封装成cli工具
 - [ ] 文档完善
 - [ ] 单元测试
-- [ ] 发布npm
+- [x] 发布npm
 
 ## 快速开始
 
-### 创建配置文件
+### 安装命令
+```shell
+npm i -g fastdeploy
+```
+### fastdeploy 两种上传模式.
+
+#### 允许通过cli直接上传.
+```shell
+fastdeploy -C 
+```
+
+#### 允许通过设置配置文件上传.
+##### 创建配置文件
 在项目根目录中创建 deploy.config.json。
 ```javascript
 {
@@ -50,7 +62,9 @@
 }
 
 ```
-### 开始上传
-```nodejs
-node index.js
+##### 开始上传
+```shell
+fastdeploy -F
+# 执行服务器环境上传默认test环境.
+fastdeploy -F -T test 
 ```
