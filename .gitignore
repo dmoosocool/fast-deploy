@@ -1,3 +1,4 @@
 node_modules
 deployed
 deploy.config.json
+deployed-version-info.json
