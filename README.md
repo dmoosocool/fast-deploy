@@ -1,6 +1,9 @@
 # fast-deploy
 将目录快速压缩, 发布到服务器上, 执行远端服务器脚本.
 
+暂支持功能如下**Task List**, 
+**branch dev**, 将使用typescript,oclif进行重写. 
+
 ## Task List
 - [x] 通过json文件夹读取用户配置信息
 - [x] 通过cli命令行读取用户配置信息
